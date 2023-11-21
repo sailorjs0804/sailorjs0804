@@ -1,6 +1,7 @@
-- 👋 Hi, I’m @sailorjs0804
-- 👀 I’m interested in `LLM,AI,Txt2Img`
+- 👋 Hi, I’m @sailorjs0804.
+- 👀 I’m interested in `LLM,AI,Txt2Img`.
 - 🌱 I’m currently interning in `Initi:AI` company.
+- 📚 My paper is about connection between blockchain and federated-learning
 
 <!---
 sailorjs0804/sailorjs0804 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
