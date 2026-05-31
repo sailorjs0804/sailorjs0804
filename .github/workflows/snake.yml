@@ -1,0 +1,37 @@
+name: Generate Snake Animation
+
+on:
+  schedule:
+    - cron: "0 5 * * *"      # 每天 UTC 05:00 跑一次
+  workflow_dispatch:          # 允许手动触发
+
+permissions:
+  contents: write             # 提交回 main 需要写权限
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      # 直接生成到 profile-snake-contrib 目录(相对仓库根目录)
+      - name: generate github-contribution-grid-snake.svg
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            profile-snake-contrib/github-contribution-grid-snake.svg
+            profile-snake-contrib/github-contribution-grid-snake-dark.svg?palette=github-dark
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # 只提交这两个 SVG,不动其他文件
+      - name: commit & push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: main
+          commit_message: "chore: update snake animation"
+          file_pattern: profile-snake-contrib/*.svg
