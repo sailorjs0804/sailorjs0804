@@ -5,7 +5,7 @@
 ### 🙋 About Me
 
 - 🔭 I'm interested in **LLM** and **AudioLLM**
-- 🌱 I'm currently working at **FlashLabs**, where we recently released our in-house end-to-end model **FlashLabs Chroma 1.0**
+- 🌱 I'm currently working at **Continuum AI**, where we recently released our in-house end-to-end model **FlashLabs Chroma 1.0**
 - 🎧 My work spans large-scale data pipelines, GPU training, and real-time audio / TTS systems
 - 💬 Feel free to reach out about multimodal speech models and audio infrastructure
 
